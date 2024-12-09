@@ -1,4 +1,4 @@
-const { exec, execFile, spawn } = require('child_process');
+const { exec, execFile, spawn } = require('node:child_process');
 
 // exec - Executes a command in a shell, buffers the output
 exec('ls -la', (error, stdout, stderr) => {

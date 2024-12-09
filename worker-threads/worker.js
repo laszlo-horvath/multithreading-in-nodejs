@@ -1,4 +1,5 @@
-const { parentPort } = require("worker_threads");
+const { parentPort } = require("node:worker_threads");
+const { cpuIntensiveCalculation } = require("./../utils/index");
 
 // Listen for initial message from parent thread
 parentPort.on("message", ({ i, sharedData }) => {
@@ -12,13 +13,4 @@ parentPort.on("message", ({ i, sharedData }) => {
   process.exit();
 });
 
-function cpuIntensiveCalculation() {
-  let sum = 0;
 
-  // Perform 1 billion additions
-  for (let i = 0; i < 1e9; i++) {
-    sum += i;
-  }
-
-  return sum;
-}
