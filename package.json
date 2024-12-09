@@ -1,0 +1,20 @@
+{
+  "name": "multithreading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "worker-threads": "node ./worker-threads/main.js",
+    "exec": "node ./child-processes/exec.js",
+    "exec-file": "node ./child-processes/exec-file.js",
+    "spawn": "node ./child-processes/spawn.js",
+    "fork": "node ./forks/server.js",
+    "cluster": "node ./clusters/cluster.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
